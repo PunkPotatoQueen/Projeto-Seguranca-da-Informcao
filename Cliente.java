@@ -1,9 +1,9 @@
 public class Cliente {
-    private String nome;
-    private int idade;
-    private String endereco;
-    private String numeroConta;
-    private String cpf;
+    private static String nome;
+    private static int idade;
+    private static String endereco;
+    private static String numeroConta;
+    private static String cpf;
 
     public Cliente(String nome, int idade, String endereco, String numeroConta, String cpf) {
         this.nome = nome;
@@ -56,7 +56,7 @@ public class Cliente {
     }
 
     // Método adicional para exibir informações
-    public void exibirInformacoes() {
+    public static void exibirInformacoes() {
         System.out.println("Nome: " + nome);
         System.out.println("Idade: " + idade);
         System.out.println("Endereço: " + endereco);

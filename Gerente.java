@@ -7,7 +7,6 @@ public class Gerente<Funcionario> {
     private String endereco;
     private String cpf;
     private int departamento;
-    private List<Funcionario> funcionarios;
 
     public Gerente(String nome, int idade, String endereco, String cpf, int departamento) {
         this.nome = nome;
@@ -15,7 +14,6 @@ public class Gerente<Funcionario> {
         this.endereco = endereco;
         this.cpf = cpf;
         this.departamento = departamento;
-        this.funcionarios = new ArrayList<>();
     }
 
     // Métodos Get e Set (conforme necessário)
@@ -60,22 +58,6 @@ public class Gerente<Funcionario> {
         this.departamento = departamento;
     }
 
-    public List<Funcionario> getFuncionarios() {
-        return funcionarios;
-    }
-
-    public void setFuncionarios(List<Funcionario> funcionarios) {
-        this.funcionarios = funcionarios;
-    }
-
-    // Métodos adicionais para adicionar e remover funcionários
-    public void adicionarFuncionario(Funcionario funcionario) {
-        funcionarios.add(funcionario);
-    }
-
-    public void removerFuncionario(Funcionario funcionario) {
-        funcionarios.remove(funcionario);
-    }
 
     // Método para exibir informações do gerente e seus funcionários
     public void exibirInformacoes() {
@@ -84,6 +66,6 @@ public class Gerente<Funcionario> {
         System.out.println("Endereço: " + endereco);
         System.out.println("CPF: " + cpf);
         System.out.println("Departamento: " + departamento);
-        System.out.println("Funcionários: " + funcionarios);
+
     }
 }

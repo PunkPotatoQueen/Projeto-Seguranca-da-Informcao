@@ -8,7 +8,6 @@ public class Funcionario<Cliente> {
     private int matricula;
     private String cpf;
     private int departamento;
-    private List<Cliente> clientes;
 
     public Funcionario(String nome, int idade, String endereco, String cpf, int departamento) {
         this.nome = nome;
@@ -16,7 +15,6 @@ public class Funcionario<Cliente> {
         this.endereco = endereco;
         this.cpf = cpf;
         this.departamento = departamento;
-        this.clientes = new ArrayList<>();
     }
 
     // Métodos Get
@@ -44,10 +42,6 @@ public class Funcionario<Cliente> {
         return departamento;
     }
 
-    public List<Cliente> getClientes() {
-        return clientes;
-    }
-
     // Métodos Set
     public void setNome(String nome) {
         this.nome = nome;
@@ -72,28 +66,13 @@ public class Funcionario<Cliente> {
     public void setDepartamento(int departamento) {
         this.departamento = departamento;
     }
-
-    public void setClientes(List<Cliente> clientes) {
-        this.clientes = clientes;
-    }
-
-    // Métodos adicionais para adicionar e remover clientes
-    public void adicionarCliente(Cliente cliente) {
-        clientes.add(cliente);
-    }
-
-    public void removerCliente(Cliente cliente) {
-        clientes.remove(cliente);
-    }
-
-    // Método adicional para exibir informações
+    
     public void exibirInformacoes() {
         System.out.println("Nome: " + nome);
         System.out.println("Idade: " + idade);
         System.out.println("Endereço: " + endereco);
         System.out.println("CPF: " + cpf);
         System.out.println("Departamento: " + departamento);
-        System.out.println("Clientes: " + clientes);
 
     }
 }
